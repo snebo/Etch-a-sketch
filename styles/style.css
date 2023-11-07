@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    flex:1 0 6%;
+    height:90px;
+    border:1px solid black;
+}
