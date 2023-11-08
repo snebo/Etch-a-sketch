@@ -3,14 +3,22 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
 .container{
     padding: 5px;
+    width: 800px;
+    border: 2px solid pink;
+    height: 800px;
     display: flex;
     flex-wrap: wrap;
 }
 .box{
     flex:1 0 6%;
-    height:6.15vh;
+    height:6.25%;
     border:1px solid black;
     transition: 900ms;
 }
