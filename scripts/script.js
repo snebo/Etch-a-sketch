@@ -28,10 +28,13 @@ function pixelShader(){
 
 change_grid.addEventListener("click",()=>{
     let catcher = Number(prompt("Enter a grid size (eg 32, 16,...)"))
-    if (typeof catcher == "number"){
+    if (typeof catcher == "number" && catcher >1 && catcher<129){
         grid_input = catcher
         gridSetup()
     } 
+    else{
+        alert("Thats and invalid grid size")
+    }
 })
 
 gridSetup()
