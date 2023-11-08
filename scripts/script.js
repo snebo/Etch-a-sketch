@@ -22,7 +22,7 @@ function gridSetup(){
 function pixelShader(){
     const pixels = document.querySelectorAll('.box')
     pixels.forEach(pixel => pixel.addEventListener("mouseover", ()=>{
-        pixel.style.cssText += "background-color: black"
+        pixel.style.cssText += `background-color: ${randomColor()}`
     }))
 }
 
@@ -36,5 +36,11 @@ change_grid.addEventListener("click",()=>{
         alert("Thats and invalid grid size")
     }
 })
+function randomColor(){
+    let r = Math.floor(Math.random()*257)
+    let g = Math.floor(Math.random()*257)
+    let b = Math.floor(Math.random()*257)
+    return ["rgb("+r+","+g+","+b+")"].join()
+}
 
 gridSetup()
