@@ -2,13 +2,13 @@ let container = document.querySelector(".container")
 let change_grid  = document.querySelector(".change_grid")
 
 let grid_input = 16
-let count
-let grid
+let count, grid, black_count
 
 function gridSetup(){
     container.innerHTML=""
     grid = grid_input*grid_input
     count= 0
+    black_count = 257
 
     while(count < grid){
         newDiv = document.createElement('div')
@@ -37,9 +37,10 @@ change_grid.addEventListener("click",()=>{
     }
 })
 function randomColor(){
-    let r = Math.floor(Math.random()*257)
-    let g = Math.floor(Math.random()*257)
-    let b = Math.floor(Math.random()*257)
+    let r = Math.floor(Math.random()*black_count)
+    let g = Math.floor(Math.random()*black_count)
+    let b = Math.floor(Math.random()*black_count)
+    black_count = black_count -(black_count/10)
     return ["rgb("+r+","+g+","+b+")"].join()
 }
 
